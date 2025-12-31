@@ -12,7 +12,11 @@ class BasicScreen extends StatelessWidget {
   BasicScreen({super.key});
 
   final List<MenuItem> items = [
-    MenuItem(title: '布局组件', route: '/basic/layout'),
+    MenuItem(title: 'GridVew.extent', route: '/basic/grid-view-extent'),
+    MenuItem(title: 'GridView.count', route: '/basic/grid-view-count'),
+    MenuItem(title: 'Grid and List', route: '/basic/grid-and-list'),
+    MenuItem(title: 'Color demo', route: '/basic/color-demo'),
+    MenuItem(title: 'Layout Demo', route: '/basic/layout-demo'),
   ];
 
   Widget itemBuilder(BuildContext context, int index) {

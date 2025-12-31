@@ -1,3 +1,7 @@
+import 'package:fluter_app/basic/color_demo.dart';
+import 'package:fluter_app/basic/grid_and_list.dart';
+import 'package:fluter_app/basic/grid_view_count.dart';
+import 'package:fluter_app/basic/layout_demo.dart';
 import 'package:fluter_app/personal/personal_screen.dart';
 import 'package:fluter_app/personal/personal_screen_detail.dart';
 import 'package:fluter_app/search/search_screen.dart';
@@ -6,7 +10,7 @@ import 'package:fluter_app/widgets/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fluter_app/basic/basic_screen.dart';
-import "./basic/layout_demo.dart";
+import "basic/grid_view_extent.dart";
 import 'package:go_router/go_router.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(
@@ -30,7 +34,27 @@ final _router = GoRouter(
           path: '/basic',
           builder: (context, state) => BasicScreen(),
           routes: [
-            GoRoute(path: 'layout', builder: (context, state) => LayoutDemo()),
+            GoRoute(
+              path: 'grid-view-extent',
+              builder: (context, state) => GridViewExtent(),
+            ),
+            GoRoute(
+              path: 'grid-view-count',
+              builder: (context, state) =>
+                  GridViewCount(type: GridListDemoType.footer),
+            ),
+            GoRoute(
+              path: 'grid-and-list',
+              builder: (context, state) => GridAndList(),
+            ),
+            GoRoute(
+              path: 'color-demo',
+              builder: (context, state) => ColorDemo(),
+            ),
+            GoRoute(
+              path: 'layout-demo',
+              builder: (context, state) => LayoutDemo(),
+            ),
           ],
         ),
         GoRoute(
