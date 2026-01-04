@@ -102,11 +102,7 @@ class _Photo {
 }
 
 class _GridDemoPhotoItem extends StatelessWidget {
-  const _GridDemoPhotoItem({
-    super.key,
-    required this.photo,
-    required this.tileStyle,
-  });
+  const _GridDemoPhotoItem({required this.photo, required this.tileStyle});
 
   final _Photo photo;
   final GridListDemoType tileStyle;

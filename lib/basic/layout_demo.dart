@@ -5,20 +5,23 @@ class LayoutDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          ImageSection(image: 'assets/images/lake.jpg'),
-          TitleSection(
-            name: 'Oeschinen Lake Campground',
-            location: 'Kandersteg, Switzerland',
-          ),
-          ButtonSection(),
-          TextSection(
-            description:
-                'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese ',
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(title: Text('Flutter Layout Demo')),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageSection(image: 'assets/images/lake.jpg'),
+            TitleSection(
+              name: 'Oeschinen Lake Campground',
+              location: 'Kandersteg, Switzerland',
+            ),
+            ButtonSection(),
+            TextSection(
+              description:
+                  'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese ',
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -51,7 +54,7 @@ class TitleSection extends StatelessWidget {
               ],
             ),
           ),
-          Icon(Icons.star, color: Colors.red),
+          const Icon(Icons.star, color: Colors.red),
           const Text('41'),
         ],
       ),

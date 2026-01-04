@@ -30,7 +30,7 @@ class BottomNavbar extends StatelessWidget {
 
   static int _calculateSelectedIndex(BuildContext context) {
     final String location = GoRouterState.of(context).uri.path;
-    if (location.startsWith('/basic')) {
+    if (location.startsWith('/scroll')) {
       return 0;
     }
     if (location.startsWith('/search')) {
@@ -45,7 +45,7 @@ class BottomNavbar extends StatelessWidget {
   void _onItemTapped(int idx, BuildContext context) {
     switch (idx) {
       case 0:
-        GoRouter.of(context).go('/basic');
+        GoRouter.of(context).go('/scroll');
         break;
       case 1:
         GoRouter.of(context).go('/search');

@@ -13,7 +13,7 @@ class SearchScreen extends StatelessWidget {
           onPressed: () {
             context.go('/search/detail');
           },
-          child: const Text('detail'),
+          child: const Text('周睿'),
         ),
       ),
     );
